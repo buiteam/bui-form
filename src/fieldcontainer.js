@@ -208,7 +208,7 @@ var container = BUI.Component.Controller.extend([GroupValid],
       //如果是可勾选的
       if(field instanceof Field.Check){
         var fieldValue = field.get('value');
-        if(value && (fieldValue === value || (BUI.isArray(value) && BUI.Array.contains(fieldValue,value)))){
+        if(value !== undefined && (fieldValue == value || (BUI.isArray(value) && BUI.Array.contains(fieldValue,value)))){
           field.set('checked',true);
         }else{
           field.set('checked',false);
