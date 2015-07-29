@@ -212,6 +212,7 @@ var container = BUI.Component.Controller.extend([GroupValid],
           field.set('checked',true);
         }else{
           field.set('checked',false);
+          $(field.get("el")).prop('checked',false); //checkbox控件在显示上还是勾选的
         }
       }else{
         if(value == null){
